@@ -1,0 +1,30 @@
+.green{
+  background-color: green;
+  height: 40px;
+  width: 120px;
+  border-radius: 10px;
+  border-width: 0;
+  margin: 10px;
+}
+.red{
+  background-color: red;
+  height: 40px;
+  width: 120px;
+  border-radius: 10px;
+  border-width: 0;
+  margin: 10px;
+}
+.reset{
+  background-color: gray;
+  height: 40px;
+  width: 120px;
+  border-radius: 10px;
+  border-width: 0;
+  margin: 10px;
+}
+.card{
+  text-align: center;
+}
+button:hover{
+  cursor: pointer;
+}
