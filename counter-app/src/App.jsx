@@ -1,21 +1,44 @@
-import React, { useState } from 'react'
+import React, { Component } from 'react';
+import './App.css';
 
-import './App.css'
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 0
+    };
+  }
 
-function App() {
-  const [count, setCount] = useState(0)
+  increment = () => {
+    this.setState({ count: this.state.count + 1 });
+  }
 
-  return <div>
-    <div className="card">
-      <h1>Counter App</h1>
+  decrement = () => {
+    this.setState({ count: this.state.count - 1 });
+  }
+
+  reset = () => {
+    this.setState({ count: 0 });
+  }
+
+  render() {
+    return (
       <div>
-        <h2>{count}</h2>
-        <button onClick={() => setCount(count + 1)} className='green'>Increment</button>
-        <button onClick={() => setCount(count - 1)} className='red'>Decrement</button>
-        <button onClick={() => setCount(0)} className='reset'>Reset</button>
+        <div className="card">
+          <h1>Counter App</h1>
+          <div>
+            <h2>{this.state.count}</h2>
+            <button onClick={this.increment} className='green'>Increment</button>
+            <button onClick={this.decrement} className='red'>Decrement</button>
+            <button onClick={this.reset} className='reset'>Reset</button>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
+    );
+  }
 }
 
-export default App
+export default App;
+
+
+
